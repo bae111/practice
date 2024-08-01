@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ol,ul,dl{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        #family{ /*div*/
+            width: 300px;
+            margin: 500px auto 0;
+            text-align: center;
+            position: relative;
+        }
+        #family input{
+            display: none;
+        }
+        #family label{
+            display: block; /*인라인태그니까 div의 위드값을 받아 300*/
+            line-height: 50px;
+            background-color: #333;
+            color: #fff;
+        }
+        #family ul{
+            position: absolute; 
+            width: 100%;
+            left: 0;
+            bottom: 100%; /*패밀리사이트버튼의 밑으로부터 100%채워 패밀리사이트버튼 위쪽에 붙여 움직이게 하려고(높이값만큼 올라가겠다), 밑으로부터 위로 올라간다*/
+            height: 0;
+            overflow: hidden;
+            transition: all 0.6s ease-in-out;
+        }
+        #family ul li{}
+        #family ul li a{
+            display: block;
+            line-height: 50px;
+            background-color: #333;
+            color: #fff;
+            border-bottom: solid 1px #fff;
+        }
+        #family input:checked ~ ul{ /*클릭을 대신한다 // 인풋의 동생들 중에 ul아 들어*/
+            height: 255px;
+        }
+    </style>
+</head>
+<body>
+    <div id="family">
+        <input type="checkbox" id="checkBox">
+        <label for="checkBox">패밀리사이트</label>
+        <ul>
+            <li><a href="#">패밀리 사이트1</a></li>
+            <li><a href="#">패밀리 사이트2</a></li>
+            <li><a href="#">패밀리 사이트3</a></li>
+            <li><a href="#">패밀리 사이트4</a></li>
+            <li><a href="#">패밀리 사이트5</a></li>
+        </ul>
+    </div>
+</body>
+</html>
