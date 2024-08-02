@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        #family{
+            width: 400px;
+            text-align: center;
+            margin: 400px auto 0;
+            position: relative;
+        }
+        input{
+            display: none;
+        }
+        #family label{
+            display: block;
+            line-height: 50px;
+            background-color: #333;
+            color: #fff;
+        }
+        #family ul{
+            position: absolute;
+            width: 100%;
+            bottom: 100%;
+            left: 0;
+            overflow: hidden;
+            height: 0;
+            transition: all 0.6s ease-in-out;
+        }
+        #family ul li a{
+            display: block;
+            line-height: 50px;
+            background-color: #333;
+            color: #fff;
+            border-bottom: solid 1px #fff;
+        }
+        #family input:checked ~ ul{
+            height: 255px;
+        }
+    </style>
+</head>
+<body>
+    <div id="family">
+        <input type="checkbox" id="checkBox">
+        <label for="checkBox">패밀리사이트</label>
+        <ul>
+            <li><a href="#">패밀리사이트1</a></li>
+            <li><a href="#">패밀리사이트2</a></li>
+            <li><a href="#">패밀리사이트3</a></li>
+            <li><a href="#">패밀리사이트4</a></li>
+            <li><a href="#">패밀리사이트5</a></li>
+        </ul>
+    </div>
+</body>
+</html>
