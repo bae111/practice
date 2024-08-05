@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+dl{
+    list-style: none;
+    width: 500px;
+    margin: 0 auto;
+}
+dl dt{
+    line-height: 100px;
+    background-color: #333;
+    color: #fff;
+    text-indent: 60px;
+    font-weight: bold;
+}
+dl dd{
+    line-height: 100px;
+    background-color: #fff;
+    color: #333;
+    text-indent: 40px;
+    display: none;
+}
