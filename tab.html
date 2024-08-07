@@ -63,19 +63,24 @@
 
         #tab .notice-content li a{
             color: #000;
-            display: flex;
+            /*display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 16px;
+            gap: 16px;*/
+            display: block; /*반드시 블록요소여야함*/
+            width: 80%; /*반드시 위드값이 존재해야함*/
+            overflow: hidden; /*너비를 넘어가면 안보이게*/
+            white-space: nowrap; /*두줄처리 방지*/
+            text-overflow: ellipsis; /*...처리*/
         }
-        #tab .notice-content li a::before{
+        /*#tab .notice-content li a::before{
             content: "";
             display: block;
             width: 10px;
             height: 10px;
             background-color: #000;
             border-radius: 50%;
-        }
+        }*/
     </style>
 </head>
 <body>
