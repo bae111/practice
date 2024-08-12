@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#open-btn{
+    display: block;
+    width: 20vw;
+    background-color: #fff;
+    border: 0;
+    box-shadow: 15px 15px 20px;
+    line-height: 100px;
+    margin: 5vh auto 0;
+    font-size: 2em;
+    cursor: pointer;
+}
+#popup-box{
+    width: 600px;
+    height: 400px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    top: calc(50% - 200px);
+    left: calc(50% - 300px);
+    display: none;
+}
+#popup-box span{
+    position: absolute;
+    text-align: right;
+    width: 80%;
+    top: 5%;
+    right: 5%;
+    cursor: pointer;
+}
+#popup-box p{
+    text-align: center;
+    line-height: 400px;
+}
+.show{
+    display: block !important;
+}
+
+/*
+btn과 팝업박스를 감쌀 수 있는 div를 만든다
+*/
+/* #container{
+    position: relative;
+    top: 100px;
+}
+#open-btn{
+    display: block;
+    background-color: #fff;
+    width: 20%;
+    color: #333;
+    line-height: 4;
+    font-size: 2em;
+    align-items: center;
+    margin: 100px auto;
+    border: 0;
+    box-shadow: 10px 10px 20px #333;
+    cursor: pointer;
+}
+#popup-box{
+    background-color: #333;
+    width: 400px; */
+    /* height: 400px;
+    text-align: center;
+    position: fixed; */
+    /* position: absolute;
+    top: calc(50% - 200px);
+    left: calc(50% - 200px);
+    text-align: right; */
+    /* display: none; */
+    /* overflow: hidden;
+    height: 0;
+}
+#popup-box span{
+    cursor: pointer;
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    width: 20px;
+}
+#popup-box .test{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#popup-box p{
+    color: #fff;
+    text-align: center;
+    line-height: 400px;
+}
+.show{
+    height: 400px !important;
+} */
