@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,ol,dl{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.any{
+    font-size: 3em;
+    /* animation-name: fadeInOut; */
+    /*애니메이션의 이름을 정의합니다.*/
+    /* animation-duration: 1s; */
+    /*duration = transition이랑 똑같음.
+    한 사이클의 애니메이션이 얼마에 걸쳐 일어날지 지정합니다. 1초에 걸쳐*/
+    /* animation-delay: 3s; */
+    /*언제 애니메이션이 시작될지 지정합니다. 3초 뒤*/
+    /* animation-direction: alternate; */
+    /*애니메이션이 종료되고 나서 처음부터 시작할지 역방향으로 진행할지 지정합니다.
+    normal : 기본값, 재생 끝나면 처음부터 다시 재생.
+    reverse : 역방향으로 재생.
+    alternate : 순방향 <-> 역방향 번갈아가며 재생.
+    alternate-reverse : 역방향 <-> 순방향 번갈아가며 재생.(alternate과 반대)*/
+    /* animation-iteration-count: infinite; */
+    /*애니메이션이 몇 번 반복될지 지정합니다. 10이라고 적으면 10번 반복*/
+    /* animation-play-state: running; */
+    /*애니메이션을 멈추거나 다시 시작할 수 있습니다. paused 멈춤 */
+    /*응용 : js에서 running을 클릭했을 때 paused 멈추게 할 수 있다.*/
+    /* animation-timing-function: ease-in-out; */
+    /*중간 상태들의 전환을 어떤 시간 간격으로 진행할지 지정*/
+    /* animation-fill-mode: both; */
+    /*애니메이션이 시작되기 전이나 끝나고 난 후 어떤 값이 적용될지 지정 both : 양 옆*/
+    animation: fadeInOut 1s ease-in-out 3s infinite alternate both running;
+    /*축약형 : animation: name | duration | timing-function | delay | iteration-count | direction | fill-mode | play-state / 
+    이름 / 얼마에 걸쳐 / 어떤 시간 간격으로 전환 / 언제 시작할지 / 몇번 반복할지 / 종료 후 진행방식 / 시작 전후 어떤 값 적용할지 / 멈출지 다시시작할지
+    기본값은 마지막에 넣는 running 밖에 없고 나머진 전부 지정값. 웬만하면 순서를 지켜야 함.*/
+}
+/*스타일 맨 밑에 가서 @키프레임 이름 카멜케이스*/
+/*주의사항 : none 이라는 이름을 쓰게 되면 재생안함.
+네이밍규칙 : 숫자 시작, 특수문자 시작 안됨.
+특수문자는 _ 과 - 만 가능. 여백 안됨. 한글 안됨.
+
+세부적으로 퍼센테이지가 다 들어갈 수 있음. 
+키프레임 퍼센트로 조절이 다 된다(1~100까지)
+0%는 from과 같다. 100%는 to와 같다.
+
+애니메이션 이름 페이드인아웃이라고 적고,
+opacity 1은 보이고 0은 안보임.*/
+@keyframes fadeInOut{
+    0%{
+        opacity: 1;
+    }
+    /*=from{}*/
+    50%{}
+    70%{}
+    100%{
+        opacity: 0;
+        color: #0000ff;
+    }
+    /*=to{}*/
+}
+
+/*
+벤더프리픽스
+@-webkit-keyframes => 크롬, 사파리
+웹 표준과 관련된 얘기임.
+@-moz-keyframes => 파이어폭스
+@-o-keyframes => 오페라
+@-ms-keyframes => 익스플로러
+
+크로스브라우징 
+크롬&사파리 : -webkit-
+파이어폭스 : -moz-
+오페라 : -o-
+인터넷 익스플로러 : -ms-
+*/
+/* @-webkit-keyframes fadeInOut{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        color: #0000ff;
+    }
+}
+@-moz-keyframes fadeInOut{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        color: #0000ff;
+    }
+}
+@-o-keyframes fadeInOut{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        color: #0000ff;
+    }
+} 
+@keyframes fadeInOut{
+    0%{
+        opacity: 1;
+    }
+    50%{}
+    70%{}
+    100%{
+        opacity: 0;
+        color: #0000ff;
+    }
+}    
+*/
+/*먼저 걸러먹고 통틀어서 먹게 하는 경우*/
+/* .any{
+    -webkit-animation: fadeInOut 1s ease-in-out 3s infinite alternate both running;
+    -moz-animation: fadeInOut 1s ease-in-out 3s infinite alternate both running;
+    -o-animation: fadeInOut 1s ease-in-out 3s infinite alternate both running;
+    -ms-animation: fadeInOut 1s ease-in-out 3s infinite alternate both running;
+    animation: fadeInOut 1s ease-in-out 3s infinite alternate both running;
+} */
+/*
+vendor prefix 벤더 프리픽스
+앞에 접두어 붙여서 해당 브라우저가 인식할 수 있게 하는 행위
+각 브라우저에서 판독이 가능한 접두어를 붙여서 해당 브라우저에 인식할 수 있게 하는 것
+
+크로스 브라우징
+= 최대한 많은 종류의 웹 브라우저에서 정상적으로 작동하는 웹페이지를 만드는 방법*/
