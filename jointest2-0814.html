@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/join.css">
+</head>
+<body class="nanum-gothic-regular">
+    <form id="join-01">
+        <fieldset>
+            <h2>로그인</h2>
+            <div class="join-box">
+                <ul class="idpw">
+                    <li><input type="email" name="email" pattern=".+@example\.com" placeholder="이메일 주소" required></li>
+                    <li><input type="password" name="pw" minlength="6" maxlength="10" placeholder="비밀번호" required></li>
+                </ul>
+                <div class="check-01">
+                    <input type="checkbox" id="check-join" name="check" checked>
+                    <label for="check-join">로그인 상태 유지</label>
+                </div>
+                <input type="submit" value="로그인">
+
+                <ul class="join-btn">
+                    <li><a href="#">아이디 찾기</a></li>
+                    <li><a href="#">비밀번호 찾기</a></li>
+                    <li><a href="#">회원가입</a></li>
+                </ul>
+
+                <ul class="sns-join">
+                    <li><a href="#" class="facebook">페이스북</a></li>
+                    <li><a href="#" class="google">구글</a></li>
+                    <li><a href="#" class="naver">네이버</a></li>
+                </ul>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,152 @@
+.nanum-gothic-regular {
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,ol,dl{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+#join-01{
+    width: 500px;
+    margin: 10px auto;
+    font-size: 14px;
+    border: solid 1px #f2f2f2;
+}
+#join-01 fieldset{
+    padding: 20px;
+    border: solid 1px #fff;
+    background-color: #f2f2f2;
+}
+#join-01 fieldset h2{
+    width: 100%;
+    margin: 10px auto;
+    color: #f2562e;
+    font-size: 3em;
+    text-align: center;
+}
+#join-01 .join-box{
+    background-color: #fff;
+    border: solid 1px #ccc;
+    padding: 30px;
+}
+#join-01 .idpw{
+    width: 100%;
+}
+#join-01 .idpw li{
+    line-height: 40px;
+    border-bottom: solid 1px #ccc;
+}
+input::placeholder{
+    color: #aaa;
+}
+input[type="email"]{
+    width: 100%;
+    color: #444;
+    outline: none;
+    border: 0;
+    text-indent: 10px;
+}
+input[type="password"]{
+    width: 100%;
+    color: #444;
+    outline: none;
+    border: 0;
+    text-indent: 10px;
+}
+
+.check-01{
+    margin: 20px 0;
+}
+input{
+    font-size: 14px;
+}
+input[type="checkbox"]{
+    width: 14px;
+    height: 14px;
+}
+
+input[type="submit"]{
+    width: 100%;
+    margin: 10px auto;
+    background-color: #f2562e;
+    color: #fff;
+    border: 0;
+    line-height: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+}
+input[type="submit"]:hover{
+    background-color: #000;
+}
+.join-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+.join-btn li::after{
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-right: solid 1px #ccc;
+}
+.join-btn li:last-child::after{
+    border: 0;
+}
+.join-btn li a{
+    display: inline-block;
+    color: #999;
+    margin-left: 10px;
+}
+.join-btn a::after{
+    display: block;
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: #ccc;
+}
+.join-btn li:hover a::after{
+    width: 100%;
+}
+
+.sns-join{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20px;
+    border-top: solid 1px #ccc;
+}
+.sns-join li{
+    width: 25%;
+}
+.sns-join li a{
+    display: block;
+    line-height: 40px;
+    border-radius: 6%;
+}
+.sns-join .facebook{
+    background-color: #3b5997;
+    color: #fff;
+}
+.sns-join .google{
+    background-color: #fff;
+    border: solid 1px #ccc;
+    color: #000;
+    box-sizing: border-box;
+}
+.sns-join .naver{
+    background-color: #3dbb19;
+    color: #fff;
+}
