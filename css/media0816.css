@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+html,
+body{
+    font-size: 14px;
+}
+.list{
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; /*넘치면 다음줄로 넘기겠다, nowrap이면 한줄에서 처리하겠다*/
+}
+.list li{
+    width: 25%;
+    height: 300px;
+    background-color: #fff000;
+    margin-bottom: 1%;
+    font-size: 2rem;
+}
+.list li:nth-child(odd){
+    background-color: #9960b5;
+}
+@media screen and (max-width : 1279px){
+    .list li{
+        width: 33.33%;
+    }
+}
+@media screen and (max-width : 767px){
+    .list li{
+        width: 50%;
+        font-size: 1.8rem;
+    }
+}
+@media screen and (max-width : 374px){
+    .list{
+        display: block;
+    }
+    .list li{
+        width: 100%;
+        font-size: 1.4rem;
+    }
+}
+/*=최대너비 1279px 이하 일때(=1279px 포함)
+1279px가 되면 li width : 33.33%가 되게
+pc로 먼저 작업하면 max-width로 잡고
+모바일로 먼저 작업하면 min-width로 잡는 경향이 있음
+분기점 = 브레이크포인트
+중간 분기점을 생략하고 태블릿 사이즈 768이니까 767으로 가면 50%를 먹어라
+분기에 따라 디자인이 바뀐다 = 반응형
+초반에 rem으로 잡아야 나중에 고생을 안한다
+브레이크 포인트는 부트스트랩 기준으로 잡아야 함. 위의 기준으로 하면 안됨.*/
