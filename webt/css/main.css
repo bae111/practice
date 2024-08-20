@@ -21,8 +21,6 @@ a{
     justify-content: space-between;
     align-items: center;
     height: 100px;
-    border-bottom: solid 1px #333;
-    box-sizing: border-box;
 }
 #header h1{}
 #header h1 a{
@@ -46,7 +44,7 @@ a{
 }
 #header .depth-01 > li > a{
     display: block;
-    background-color: #fff;
+    background-color: #fffdcf;
     line-height: 50px;
     transition: all 0.6s ease-in-out;
 }
@@ -72,7 +70,7 @@ a{
 }
 #header .depth-01 > li:hover > a,
 #header .depth-02 li:hover a{
-    background-color: #333;
+    background-color: #df7e00;
     color: #fff;
 }
 
@@ -81,4 +79,186 @@ a{
 #main-banner ul{
     height: 300px;
     background-color: #ccc;
+}
+
+/************************************/
+#content{}
+#content > ul{
+    display: flex;
+}
+#content > ul > li{
+    width: 33.33%;
+}
+
+#content .tab-box{}
+#content .tab-box > ul{
+    display: flex;
+    position: relative;
+
+}
+#content .tab-box > ul > li{}
+#content .tab-box > ul > li input{
+    display: none;
+}
+#content .tab-box > ul > li label{
+    display: block;
+    line-height: 50px;
+    background-color: #df7e00;
+    color: #fff;
+    padding: 0 20px;
+}
+#content .ab-box{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fffdcf;
+    z-index: 1;
+    height: 150px;
+}
+
+#content .notice{}
+#content .notice dl{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#content .notice dl dt{}
+#content .notice dl dt a{}
+#content .notice dl dt{}
+#content .notice dl dt a{}
+#content .notice .ab-box{
+    display: flex;
+    flex-direction: column; /*세로정렬*/
+    justify-content: space-between; /*위아래 끝끝 붙고 양 옆을 나눠먹음*/
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+
+#content .gallery ul{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+#content .gallery ul li{}
+#content .gallery ul li a{}
+#content .gallery .ab-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content .tab-box > ul > li input:checked ~ .ab-box{
+    z-index: 99;
+}
+#content .tab-box > ul > li input:checked + label{
+    background-color: #fffdcf;
+    color: #333;
+}
+
+
+#content .middle-banner{}
+#content .middle-banner a{
+    display: block;
+    height: 200px;
+    background: url('../images/banner.jpg') no-repeat center / cover;
+}
+
+#content .direct{
+    height: 200px;
+    background: url('../images/direct.jpg') no-repeat center / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#content .direct button{
+    display: block;
+    width: 200px;
+    line-height: 50px;
+    text-align: center;
+    border: 0;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#footer > ul{
+    display: flex;
+    height: 100px;
+}
+#footer > ul > li{}
+#footer .button-logo{
+    width: 20%;
+}
+#footer .button-logo a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#footer .button-logo a img{
+    display: block;
+    filter: grayscale(100%);
+}
+#footer .copy{
+    width: 60%;
+}
+#footer .copy p{
+    line-height: 100px;
+    text-align: center;
+}
+#footer .sns-icon{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#footer .sns-list{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+#footer .sns-list li{}
+#footer .sns-list a{
+    display: block;
+}
+#footer .sns-list img{
+    display: block;
+    border-radius: 20%;
+}
+
+#popup-box{
+    position: fixed;
+    width: 600px;
+    height: 300px;
+    background-color: #fff;
+    border: solid 1px #333;
+    top: calc(50% - 150px);
+    left: calc(50% - 300px);
+    z-index: 999;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 40px;
+    display: none;
+}
+#popup-box h3{
+    margin: 40px 0;
+}
+#popup-box p{}
+#close-btn{
+    position: absolute;
+    padding: 20px;
+    top: 5%;
+    right: 5%;
+    background-color: #fff;
+    border: 0;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: #ccc 6px 6px 6px;
+    cursor: pointer;
+}
+.show{
+    display: block !important;
 }
