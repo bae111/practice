@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내장함수</title>
+</head>
+<body>
+    <script>
+        //자바스크립트는 프로그래밍 언어임.
+        // 명령을 내리고픈 대상에 자바스크립트 명령을 전달하면
+        // 입력 -> 처리 -> 출력 순서대로 작업이 이루어짐.
+        // 자바스크립트 명령문으로 지시를 주는 어떤 대상을 '객체'라고 함.
+
+        // 입력 : 객체에게 수행 명령을 전달함.
+        // 처리 : 객체가 주어진 작업을 수행함.
+        // 출력 : 객체가 작업을 수행한 결과를 사용자에게 반환함.
+
+        document.write('Hello world <br>');
+        // ; 빼먹어도 실행시켜줌. 제발 속지마세요.
+        // 브라우저마다 다르니 엔간하면 문장마침을 해주세요.
+        document.write("\"자바스크립트\"는 대소문자 분간을 해야합니다. <br>");
+        // 노출시킬 ""는 \ 뒤에 써줍니다.
+        document.write("'자바스크립트'는 대소문자 분간을 해야합니다. <br>");
+
+        // 이건 한줄 주석 처리
+        /*이건
+            여러줄
+                주석입니다*/
+        
+        // window.alert('처음부터 다시 작성해 주세요');
+        // window라는 객체에게(웹 브라우저) alert 이라는 기능을 수행하게 함.
+        // 한줄당 명령 하나씩 쓰는게 관습임.
+        // 가장 기본적인 출력방식.
+        // 윈도우의 내장함수임.
+
+        // 윈도우는 생략이 가능함.
+        // window.console.log('Hello?');
+        console.log('Hello??');
+
+        //변수 선언 키워드 : var / let / const
+        // 변수를 선언하다 -> 빈 박스를 어디서 주워왔다
+        // 변수의 이름을 지정하다 -> 박스에 이름표를 붙여줬다
+        // 변수에 데이터를 담았다 -> 박스에 물건을 집어넣었다
+
+        // let input = confirm('회원가입 할래?');
+        // 유저의 의사를 예 또는 아니오(확인,취소)로 입력받을 수 있다
+        // 값을 반환받는다
+        // 참(true), 또는 거짓(false)으로 값을 반환 받음.
+        // 반환받은 값을 저장하기 위해서는 미리 저장할 준비를 해두어야 함.
+
+        var people = {
+                name : 'Jhon doe',
+                age : 23,
+                gender : 'man'
+        }
+        const numberSet = [12,20,60,40,28];
+
+        console.log(people);
+        console.log(numberSet);
+
+        // 여러 가지 타입의 자료가 존재함. 자료형 이라고 함.
+
+        let firstName = prompt('성을 입력하세요');
+        let lastName = prompt('이름을 입력하세요');
+
+        console.log(firstName + lastName);
+
+        // 1 + 2 = 12 로 노출된다.
+        // prompt 함수는 입력받는 기본 자료형이 문자열이기 때문이다.
+    </script>
+</body>
+</html>
