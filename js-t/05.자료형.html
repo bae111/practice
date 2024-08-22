@@ -7,16 +7,18 @@
 </head>
 <body>
     <script>
-        // 문자열 (String)
-        // 숫자 (Number)
-        // 블린 (Boolean) [true, false]
-        // 배열 (Array)
-        // 객체 (Object)
-        // 함수 (Function)
-        // 널 (null) -> 변수가 의도적으로 '값이 없음'을 나타내도록 설정된 상태
+        // 데이터 타입 크게 8가지
+
+        // 01. 문자열 (String)
+        // 02. 숫자 (Number)
+        // 03. 블린 (Boolean) [true, false]
+        // 04. 배열 (Array)
+        // 05. 객체 (Object)
+        // 06. 함수 (Function)
+        // 07. 널 (null) -> 변수가 의도적으로 '값이 없음'을 나타내도록 설정된 상태
         // (변수를 임시적으로 비워두고 싶을 때 사용하는 값)
         // (프로그래머가 변수에 의도적으로 '값이 없음'을 할당 할 때 자주 사용)
-        // 미정의 (undefined) -> 변수가 선언되었지만, 아직 값이 할당 되어있지 않은 상태
+        // 08. 미정의 (undefined) -> 변수가 선언되었지만, 아직 값이 할당 되어있지 않은 상태
         // (변수 선언 후에 초기화 하지 않으면 기본적으로 undefined 값이 할당 됨)
         // (의도적으로 undefined를 할당하는 경우는 거의 없음)
         // 느슨한 비교 : == (같다) , 엄격한 비교 : === (데이터 타입까지 같다)
@@ -71,6 +73,132 @@
         console.log(Number((a + b).toFixed(1)));
         // 이번 연산 시 숫자로 자료형 변환.
         // 다음 호출 시, 계속 number냐? == 아니다.
+
+        // 03. 불리언 (Boolean)
+
+        const boolT = true;
+        const boolF = false;
+
+        if(boolF){
+            console.log('hello world');
+        }
+
+        // undefined, null
+
+
+        // 참조형
+        // 객체, 배열, 함수와 같은 복합적인 데이터 구조를 포함.
+        // 값을 직접 저장하는 것이 아니라 메모리 상의 '참조'를 통해 데이터를 다룸.
+        // 변수에는 실제 데이터가 있는 '메모리의 주소'를 저장
+
+        // 01. 배열 (Array)
+
+        // new 키워드 -> 생성자 함수.
+        // 생성자 함수를 통한 Array 선언.
+        // const car = new Array('kia', 'volvo', 'hyundai');
+
+        // 리터널 방식. 기호를 사용하여 데이터 생성.
+        const car = ['kia', 'volvo', 'hyundai'];
+        // 배열의 아이템, 배열의 요소, array의 엘리먼트 라고도 부름.
+        console.log(car);
+        // 0 1 2 순으로 들어가 있는 것을 확인할 수 있음.
+        // length 라는 속성이 있는 것을 볼 수 있음. 배열의 길이임.
+        // 몇개의 배열요소가 들어있는지 확인할 수 있음.
+
+        console.log(car.length);
+        console.log(car[1]);
+        // 순서로 조회하는 것을 인덱싱이라고 함.
+
+        // 몇 개가 있는지는 모르겠지만 맨 마지막 아이템을 조회해야 한다면?
+        console.log(car[car.length-1]);
+
+
+        // 02. 객체 (Object)
+
+
+        const user1 = {
+            name : 'kim',
+            age : 40,
+            gender : 'man'
+        }
+        // 키(key), 벨류(value)로 구성 되어 있음.
+        // 앞에 오는 것이 키(프로퍼티라고도 함), 뒤에 오는 것이 벨류(값이라 함)
+
+        console.log(user1);
+        // 순서라는 개념 자체가 없음.
+        // name을 먼저 넣었다고 name이 먼저 나오지 않음.
+
+        console.log(user1.name);
+        console.log(user1['age']);
+
+
+        const user2 = {
+            name : 'lee',
+            age : 20,
+            parent : user1
+        }
+
+        console.log(user2);
+
+        console.log(user2.parent.name);
+        //console.log(user2.parent['name']);
+        console.log(user2['parent']['name']);
+        // kim이 나오게 해보세요. 단, user2로 접근하세요.
+
+
+        const users = [user1, user2];
+
+        //console.log(users[users.length-1]['name']);
+        //console.log(users[users.length-1].name);
+        console.log(users[1].name);
+        console.log(users[1]['name']);
+        // 'lee'가 나오게 해주세요.
+
+        // 03. 함수 (Function)
+
+        function add (){
+            console.log('hello world!');
+        }
+
+        // 함수 호출
+        add()
+        console.log(add);
+
+        function getNumber(){
+            return 1234; // 반환하다.
+        }
+
+        console.log(getNumber()); // 리턴해주는 값 1234 나옴.
+
+        console.log(typeof getNumber); // 타입이 function
+        console.log(typeof getNumber()); // 타입이 number
+        // 완전히 다른 값이 출력됨. 주의해야함.
+
+        function hello(name){ // 매개변수, 파라미터(Parameters)
+            console.log(`hello ${name}`);
+        }
+
+        // hello('한수지'); //인자, 아규먼츠(Arguments)
+        hello(users[1].parent.name);
+
+        // (번외) Truthy, Faslsy, 참과 거짓
+
+
+        if(-0){
+            console.log('참');
+        }else{
+            console.log('거짓');
+        }
+        // 거짓 : 0, ``(빈 문자열), null, false, Undefined, NaN, -0, 0n(빅인트)
+
+        const firstName = [];
+
+        if(firstName.length){
+            console.log('참이라고 하네요');
+        }
+        // length가 0임. 거짓임.
+
+        // 참 : 거짓 값에 해당하는 데이터를 제외한 모든 것들의 참.
 
     </script>
 </body>
