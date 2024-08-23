@@ -161,7 +161,6 @@
         // console.log(result);
 
         // let result = age > setAge ? alert("너무 걱정 마세요..") : alert("젊으시네요");
-        // console.log(result);
 
         // 삼항연산자 연습
 
@@ -173,12 +172,19 @@
         // *묵시적 타입 변환 : 자바스크립트는 특정 타입의 값을 기대하는 곳에
         // 다른 타입의 값이 들어오면 자동으로 타입을 변환해서 사용함.
 
-        let userHeight = prompt('키 ?');
-        let userWeight = prompt ('몸무게 ?');
-        let setBmi = (userHeight - 100) * 0.9;
+        const userHeight = prompt('키 ?', 170);
+        const userWeight = prompt ('몸무게 ?', 70);
+        const BMI = (userHeight - 100) * 0.9; // 이 순간만 묵시적 타입 변환
 
-        let bmi = userWeight > setBmi ? alert('살 좀 빼세요...') : alert('살 좀 찌세요...');
-        console.log(setBmi);
+        // const bmi = userWeight > BMI ? alert('살 좀 빼세요...') : alert('살 좀 찌세요...');
+        const resultBMI = userWeight > BMI ? '살 좀 빼세요...' : '살 좀 찌세요...';
+        alert(resultBMI);
+
+        if(resultBMI === '살 좀 빼세요...'){
+            document.write('더 먹을건데?');
+        }else{
+            document.write('보태준거 있냐...?');
+        }
     </script>
 </body>
 </html>
