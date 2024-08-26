@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>셀렉터</title>
+</head>
+<body>
+    <p id="test"><a href="#"></a>첫번째 p 태그</p>
+    <p class="test">두번째 p 태그</p>
+    <p>세번째 p 태그</p>
+
+    <div id="container">
+
+    </div>
+
+    <script>
+        // document.querySelector('#test');
+        // document.querySelector('.test');
+
+        const tagP = document.querySelector('p');
+        console.log(tagP.innerHTML);
+        // 일치하는 요소 중 첫번째 요소를 반환
+        // 일치하는 요소가 없다? null(변수가 있긴 있는데 비어있다)을 반환함
+        // textContent -> 메서드 -> 텍스트를 들고옴. 태그는 안 갖고 옴.
+        // innerHTML -> 태그까지 다룸
+        // 단순히 텍스트만 다룰 땐 textContent를 쓰는 게 좋음
+
+        // tagP.innerHTML = '<a href="#">텍스트 바꿔치기</a>';
+
+        const divtag = document.getElementById('container');
+        console.log(divtag);
+
+        // const box = document.createElement('div');
+        // console.log(box); // 간직하고 있는 중임.
+        // createElement 지정된 이름에 html 요소를 만들어서 반환
+        // 만들어지고 반환되었다고 해서 바로 웹 브라우저에 추가되냐?
+        // 화면에 뿌려주는 작업을 해야함.
+
+        box.style.color = '#ff0000';
+        box.style.width = '200px';
+        box.style.height = '200px';
+        box.textContent = '콘텐츠 들어간다~';
+        divtag.appendChild(box); // 선택한 노드의 마지막 자식 노드로 추가
+
+        document.querySelector(x); // css 선택자 x를 기반으로 첫번째 요소를 선택 // 단수
+        document.querySelectorAll(x); // css 선택자 x를 기반으로 여러 요소를 선택 // 복수
+        // 배열 형태로 들고 옴
+        document.getElementById(x); // id의 속성값을 기반으로 요소 선택 // 단수
+        document.getElementsByClassName(x); // class 속성 값 기반으로 여러 요소 선택 // 복수
+        // 배열 형태로 들고 옴
+        // 여러 개를 들고올 땐 한번에 들고와야 하니까 배열로 들고온다(제일 중요)
+
+
+
+    </script>
+</body>
+</html>
