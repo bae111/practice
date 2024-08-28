@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문2</title>
+</head>
+<body>
+    <p onclick="window.open('about:blank').location.href='https://www.google.com'">클릭</p>
+    <!--p태그를 클릭해 이동하는 방법. 이 방법은 잘 안써서 알아만 두기-->
+    <script>
+        // const luckyNumber = prompt('행운의 숫자를 골라봐', '1~3'); // 쉼표하고 작성하면 예시로 뜸
+
+        // if(luckyNumber === '3'){ // luckyNumber가 문자 3과 일치하면 아래와 같이 출력
+        //     console.log('키보드 획득');
+        // }else if(luckyNumber === '2'){
+        //     console.log('그래픽카드 획득');
+        // }else if(luckyNumber === '1'){
+        //     console.log('PC획득');
+        // }else{
+        //     console.log('꽝');
+        // }
+
+        // switch(luckyNumber){// 얘도 조건문 . 변수자체가 직접 들어감
+        //     case '3' :
+        //         console.log('키보드 획득');
+        //         // break; // 스위치문 자체를 빠져나가는, 종료함
+        //     case '2' :
+        //         console.log('그래픽카드 획득');
+        //         break;
+        //     case '1' :
+        //         console.log('PC획득');
+        //         break;
+        //     default : 
+        //         console.log('꽝'); // else와 비슷. case 이외의 모든 상황을 의미하기떄문에 브레이크가 필요 없다
+        // } 
+        // 스위치문 주의사항 : 반드시 브레이크문을 써야 함
+        // 문장종료를 꼭 해줘야 함.(흘러가버림)
+
+
+        // 유저에게 포털검색 사이트 검색 받아서 해당 사이트로 이동 하는 문장 만들거임
+        // 구글, 다음, 네이버 중 즐겨 사용하는 사이트는 구글
+        // 다른 사이트로 이동 시 로케이션.href='url'을 써주면(로케이션=내장함수)이동을 함
+        // window.open('about:blank').location.href='url';
+        // 다른 단어 입력하면 '잘못 입력했습니다. 세가지 중 하나를 입력하세요.' 알림창
+        // 스위치 문으로 짜보세요
+
+        const portal = prompt('구글,다음,네이버 중 하나 입력해봐','구글');
+        switch(portal){
+            case '구글' :
+                window.open('about:blank').location.href="https://www.google.com";
+                break;
+            case '다음' :
+                window.open('about:blank').location.href="https://www.daum.net";
+                break;
+            case '네이버' :
+                window.open('about:blank').location.href="https://www.naver.com";
+                break;
+            default : 
+                alert('잘못 입력했습니다. 세가지 중 하나를 입력하세요.');
+        }
+        // window.open('about:blank')
+        // location.href만 쓰면 제자리에서 이동
+        // switch는 잘 사용 안함. if else 주로 씀.
+    </script>
+</body>
+</html>

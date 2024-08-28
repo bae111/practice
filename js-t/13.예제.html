@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인증번호</title>
+</head>
+<body>
+    <script>
+        function getVaildNumder(){
+
+            let number;
+
+            while(true){
+                
+                number = parseInt(prompt('1부터 10까지 중 숫자를 입력하세요'));
+
+                if(number >=1 && number <= 10){
+                    break; 
+                }else{
+                    alert('유효한 숫자가 아닙니다.')
+                }
+            }
+
+            return number; // 해당하는 숫자가 맞으면 넘버를 반환해줘라
+        }
+
+        let vaildNumder = getVaildNumder();
+        alert('인증되었습니다.');
+        console.log(vaildNumder); // 지금은 이 넘버를 콘솔에 담아둠으로써 맞춰볼 수 있음
+    </script>
+</body>
+</html>

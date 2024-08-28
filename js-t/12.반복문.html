@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while</title>
+</head>
+<body>
+    <script>
+        // let i = 0;
+
+        // while(i <= 10){ // 10보다 작거나 같을 때까지 반복
+        //     document.write(`${i}<br>`); 
+        //     i++;
+        // }
+    
+        // 조건이 변화하지 않으면 무한 반복을 터뜨린다.
+        // 조건을 거짓(false)으로 만들 수 있는 내용이 반드시 문장 안에 포함되어야 함.
+        // 초기값 받고 -> 조건 확인 -> 조건부합 -> 반복문 실행 -> 조건 확인 
+
+        // 1부터 20사이의 숫자 중에 짝수만 10개 출력
+        // while문 사용 (while문만 갖고는 안됨)        
+
+
+        let i = 0; // 10개
+        let num = 1; // 1부터 20사이의 숫자 중에 짝수
+
+        while(i < 10){ 
+            if(num % 2 === 0 && num <= 20){
+                document.write(`${num}<br>`);
+                i++; 
+            }
+            num++;
+
+        }
+
+    </script>
+</body>
+</html>
