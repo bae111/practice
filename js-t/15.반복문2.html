@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for, for of, for in</title>
+</head>
+<body>
+    <script>
+        // 기본
+        // for(let i = 0; i < 10; i++){ // 지역변수
+        //     console.log(`${i}<br>`);
+        // }
+        // console.log(i);
+
+
+        // let i = 0; // 전역변수
+        // for(; i < 10; i++){
+        //     console.log(`${i}<br>`);
+        // }
+        // console.log(i);
+
+
+        // const numbers = [43, 27, 9, 7]; // 몇개인지 모르는 데이터
+        // const len = numbers.length; // 4 return
+
+        // for(let i = 0; i < len; i++){
+        //     console.log(numbers[i]);
+        // }
+
+
+        // for of -> 배열안에 있는 값을 하나씩 들고옴
+
+        // const numbers = [43, 27, 9, 7];
+
+        // object는 안됨.
+        // const allArray = [43, '문자', { name : 'kim', age : 40}, function(){return 100}];
+        
+        // for(let all of allArray){
+        //     console.log(all);
+        // }
+
+
+        // for in -> 배열일 경우 배열의 index 번호를 차례대로 하나씩 들고옴
+        // key와 value값을 다 가져올수 있음. -> 오브젝트에 해당. (순서라는것이 존재하지 않음)
+        //
+
+        // const allArray = [43, '문자', { name : 'kim', age : 40}, function(){return 100}];
+        // for(let all in allArray){
+        //     console.log(all);
+        //     console.log(allArray[all]); // 배열의 값을 들고올 때
+        // }
+        
+        // const person = {
+        //     firstName : 'kim',
+        //     lastName : 'wooju',
+        //     age : 40
+        // }
+
+        // for(let key in person){
+        //     console.log(key); // 키를 들고옴.
+        //     console.log(person[key]); // 이 형태로 가져옴.
+        // }
+
+        const userStatus = { // 서버에서 넘어오는 데이터라고 생각.
+            alice : 'online',
+            bob : 'offline',
+            charlie : 'online',
+            david : 'offline'
+        }        
+        
+        const onlineUsers = []; // 전역변수
+
+        for(let user in userStatus){ // 객체에서 for in 사용시 key값을 가져옴.
+            // console.log(user); // 키값
+            if(userStatus[user] === 'online'){ // value값이 'online'과 같다면
+                onlineUsers.push(user); // 'online' 상태인 user만 배열에 담김.
+            }
+        }
+
+        console.log(onlineUsers);
+
+    </script>
+</body>
+</html>
